@@ -8,6 +8,6 @@ class Solution:
                 cur = cur.left
             else:
                 cur = stack.pop()
-                ret.append( cur.val )
+                ret.append(cur.val)
                 cur = cur.right
         return ret
