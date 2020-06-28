@@ -37,7 +37,7 @@ def judge1(n):
 
     return num
 # judge1(101)
-
+# 快速幂
 class Solution:
     def myPow(self, x: float, n: int) -> float:
         if x == 0:
@@ -76,4 +76,15 @@ class Solution:
         if self.isSameTree(A, B):
             return True
         return self.isSubStructure(A.left, B) or self.isSubStructure(A.right, B)
-        
+
+# 33
+class Solution:
+    def verifyPostorder(self, postorder: List[int]) -> bool:
+        stack, root = [], float('+inf')
+        for i in range(len(postorder) - 1, -1, -1):
+            cur_node = postorder[i]
+            if cur_node > root: return False
+            while stack and cur_node < stack[-1]:
+                root = stack.pop()
+            stack.append(cur_node)
+        return True
