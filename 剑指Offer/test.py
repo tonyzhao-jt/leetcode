@@ -51,6 +51,7 @@ class Solution:
             x *= x
             n >>= 1
         return res
+
 # 终止条件在 p and q == None and p.val != q.val
 class Solution:
     def isSameTree(self, p: TreeNode, q: TreeNode) -> bool:
@@ -72,7 +73,6 @@ class Solution:
     def isSubStructure(self, A: TreeNode, B: TreeNode) -> bool:
         if not A or not B:
             return False # none will not happen in this case
-        
         if self.isSameTree(A, B):
             return True
         return self.isSubStructure(A.left, B) or self.isSubStructure(A.right, B)

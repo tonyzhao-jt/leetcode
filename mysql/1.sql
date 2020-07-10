@@ -1,0 +1,1 @@
+select * from (SELECT student, avg(score) sc from STUDENT GROUP BY student) a where a.sc > 80

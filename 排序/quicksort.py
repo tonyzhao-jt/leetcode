@@ -15,6 +15,7 @@ def quickSort(a, low, high):
     quickSort(a, low, i - 1)
     quickSort(a, i + 1, high)
 
+
 a = [1,4,6,2,3,5]
 quickSort(a, 0, len(a) - 1)
 print(a)
