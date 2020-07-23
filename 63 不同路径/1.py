@@ -1,4 +1,8 @@
 class Solution:
+    # 基础的思路很简单，
+    # 非障碍：等于上或者左的路径数量之和
+    # 障碍：0
+    # 初始化多一条边方便相加，初始化原点 dp[1][1] = 1
     def uniquePathsWithObstacles(self, obstacleGrid: List[List[int]]) -> int:
         if obstacleGrid[0][0]:
             return 0
@@ -15,7 +19,7 @@ class Solution:
                     dp[i][j] = 0 # obstacle
 
         return dp[m][n]
-
+# 由于只考虑左上，所以 dp 可以降低1纬
 class Solution:
     def uniquePathsWithObstacles(self, obstacleGrid: List[List[int]]) -> int:
         if obstacleGrid[0][0]:

@@ -20,3 +20,11 @@ not 递归
 - 发现按照顺序把当前 node 的左指针指到前一次遍历的对象
 - 把前一次遍历的对象的右指针指到当前 node 即可
 
+这个不是很好记，但是可以记一个特殊情况
+- cur 在遍历的时候都赋给了 node，retRoot
+- 左下角的那个 node
+  - node.right = cur
+  - cur.left = node
+  - node = cur
+  - cur = cur.left
+
