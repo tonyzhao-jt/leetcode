@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+
+}
+
+.left
+.right{
+    flex: 0 0 40px;
+}
+.center{
+    flex: 1;
+}
+
