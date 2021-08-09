@@ -11,8 +11,10 @@ class Solution:
             a = rand7()
             b = rand7()
             num = (a - 1) * 7 + b # 49
-            if num <= 40: return num % 10 + 1
+            
+            if num <= 40: return num % 10 + 1 # 
 
+            # 下面是优化，利用被抛弃的数字
             a = num - 40 # rand 9
             b = rand7()
             num = (a - 1) * 7 + b # rand 63

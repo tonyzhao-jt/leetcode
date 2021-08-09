@@ -11,7 +11,7 @@ class Solution:
                 i += 1
             while i < j and arr[j] >= pivot:
                 j -= 1
-            if i > j:
+            if i < j:
                 arr[i], arr[j] = arr[j], arr[i]
         arr[i], arr[r] = arr[r], arr[i]
         return i
@@ -27,12 +27,13 @@ class Solution:
     def getLeastNumbers(self, arr, k):
         l = 0
         r = len(arr) - 1
+        # k = len(arr) - k
         val = self.getLeastNumbersK(arr, l, r, k)
         return val
 
 
-arr = [1,3,2,5,5,6]
-k = 3
+arr = [3,1,2,4]
+k = 2
 
 sol = Solution()
 print(sol.getLeastNumbers(arr, k))

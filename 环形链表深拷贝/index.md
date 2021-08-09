@@ -1,6 +1,6 @@
 # 题目
 深拷贝带环链表
-Leetcode 环形链表 I and 环形链表 II
+Leetcode 环形链表 I（141） and 环形链表 II（142）
 # 思路
 1. 用 dict 或者 list 开拓空间判环
 2. 用快慢指针和数学法（重点）

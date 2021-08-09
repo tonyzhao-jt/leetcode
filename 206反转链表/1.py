@@ -4,6 +4,9 @@
 #         self.val = x
 #         self.next = None
 
+from typing import SupportsComplex
+
+
 class Solution:
     def reverseList(self, head: ListNode) -> ListNode:
         # base case 新的头节点是 head

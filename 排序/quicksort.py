@@ -15,6 +15,8 @@ def quickSort(a, low, high):
     quickSort(a, low, i - 1)
     quickSort(a, i + 1, high)
 
+
+
 def partition(arr, low, high):
     if low > high:
         return None
@@ -30,6 +32,8 @@ def partition(arr, low, high):
             arr[i], arr[j] = arr[j], arr[i]
     arr[i], arr[high] = arr[high], arr[i]
     return i
+
+
 def qs_queue(arr):
     stack = []
     low = 0
