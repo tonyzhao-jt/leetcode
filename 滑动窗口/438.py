@@ -1,3 +1,6 @@
+from typing import Collection
+
+
 class Solution:
     def findAnagrams(self, s: str, p: str) -> List[int]:
         mem = collections.defaultdict(int)

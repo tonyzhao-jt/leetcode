@@ -23,6 +23,5 @@ def xor_judge2Num(a):
     return num1, num2
 
 
-
 test = [1,1,5,2,4,2,3,3]
 print(xor_judge2Num(test))

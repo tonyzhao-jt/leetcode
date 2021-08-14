@@ -1,3 +1,7 @@
+import collections
+from typing import Collection
+
+
 class Solution:
     def levelOrder(self, root: TreeNode) -> List[int]:
         if not root:
@@ -14,6 +18,7 @@ class Solution:
         return result
 
 
+
 class Solution:
     def levelOrder(self, root: TreeNode) -> List[List[int]]:
         if not root: return []
@@ -26,6 +31,7 @@ class Solution:
                 tmp.append(node.val)
                 if node.left: queue.append(node.left)
                 if node.right: queue.append(node.right)
+            if len(res) % 2 == 0:
             res.append(tmp)
         return res
 

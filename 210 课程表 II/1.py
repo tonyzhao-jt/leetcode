@@ -21,3 +21,5 @@ class Solution:
         if len(result) != numCourses:
             return []
         return result
+
+
