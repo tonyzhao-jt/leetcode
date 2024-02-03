@@ -13,3 +13,6 @@ class Solution:
             st[s[j]] = j # update the upper bound
         return ans
             
+
+
+
