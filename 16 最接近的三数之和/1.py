@@ -1,30 +1,27 @@
+from typing import Optional, List
 class Solution:
     def threeSumClosest(self, nums: List[int], target: int) -> int:
-        nums = sorted(nums)
-        best = 10 ** 7
-
-        def update(s):
-            nonlocal best
-            if abs(s - target) < abs(best - target):
-                best = s
+        n = len(nums)
+        # special cases
+        if not nums or n < 3:
+            return []
         
-        nums_len = len(nums)
-        for first in range(nums_len):
-            if first > 0 and nums[first] == nums[first - 1]:
-                continue
-            second = first + 1
-            third = nums_len - 1
-            while second < third:
-                s = nums[first] + nums[second] + nums[third]
-                if s == target:
-                    return target
-                update(s)
-                if s > target:
-                    while second < third and nums[third] == nums[third - 1]:
-                        third -= 1
-                    third -= 1
+        nums.sort()
+        ans = nums[0] + nums[1] + nums[2] # init 
+        
+        for i in range(n - 2):
+            # remove the repeating cases
+            if i>= 1 and nums[i] == nums[i-1]: continue 
+            L, R = i + 1, n - 1 
+            while L < R:
+                sum_three = nums[i] + nums[L] + nums[R]
+                if abs(sum_three - target) < abs(ans - target):
+                    ans = sum_three
+                if sum_three - target > 0:
+                    R -= 1
+                elif sum_three - target < 0:
+                    L += 1
                 else:
-                    while second < third and nums[second] == nums[second + 1]:
-                        second += 1
-                    second += 1
-        return best
+                    return target
+
+        return ans

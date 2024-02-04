@@ -11,3 +11,9 @@ List:
 ## Recursion
 31 数组的下一个排列 (next permutation) MEDIUM
 46 全排列 MEDIUM
+
+
+## Sorting and Searching
+50 Pow(x, n) MEDIUM
+56 MergeIntervals MEDIUM
+
